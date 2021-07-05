@@ -9,7 +9,12 @@ apt-get install libeigen3-dev
 ```
 
 ### Pangolin
-照著這連結 [Link](https://github.com/stevenlovegrove/Pangolin/tree/1ec721d59ff6b799b9c24b8817f3b7ad2c929b83) 步驟安裝
+先用此指令安裝Glew
+```shell
+sudo apt-get install libglew-dev
+```
+
+再照著這 [Link](https://github.com/stevenlovegrove/Pangolin/tree/1ec721d59ff6b799b9c24b8817f3b7ad2c929b83) 步驟安裝
 
 ## IDE
 Visual studio code 
