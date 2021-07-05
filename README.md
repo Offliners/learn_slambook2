@@ -8,4 +8,4 @@ Visual studio code
 * github : https://github.com/gaoxiang12/slambook2
 * SLAM視覺十四講：雙倍內容強化版 (`ISBN：9789865501044`)
 
-![Reference](https://github.com/Offliners/SLAM/blob/main/reference.png)
+![Reference](https://github.com/Offliners/SlambookWSL/blob/main/reference.png)
