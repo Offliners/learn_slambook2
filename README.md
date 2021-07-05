@@ -2,11 +2,14 @@
 code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.04)
 
 ## Thirdparty
-#### Eigen
+### Eigen
 輸入此指令安裝，並加入到C/C++插件的includePath
 ```shell
 apt-get install libeigen3-dev
 ```
+
+### Pangolin
+照著這連結[Link](https://github.com/stevenlovegrove/Pangolin/tree/1ec721d59ff6b799b9c24b8817f3b7ad2c929b83)步驟安裝
 
 ## IDE
 Visual studio code 
