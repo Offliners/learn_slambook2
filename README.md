@@ -2,7 +2,7 @@
 code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.04)
 
 ## Thirdparty
-#### `Eigen`
+#### Eigen
 輸入此指令安裝，並加入到C/C++插件的includePath
 ```shell
 apt-get install libeigen3-dev
