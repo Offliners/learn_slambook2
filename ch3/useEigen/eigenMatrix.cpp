@@ -2,9 +2,9 @@
 #include<ctime>
 
 // Eigen 核心部分
-#include <Eigen/Core>
+#include<Eigen/Core>
 // 稠密矩陣的代數運算（逆，特徵值等）
-#include <Eigen/Dense>
+#include<Eigen/Dense>
 
 using namespace std;
 using namespace Eigen;
@@ -15,7 +15,7 @@ using namespace Eigen;
 * 本程序演示了 Eigen 基本類型的使用
 ****************************/
 
-int main(int argc, char **argv)
+int main(int argc, char** argv)
 {
     // Eigen 中所有向量和矩陣都是Eigen::Matrix，它是一個模板類。它的前三個參數為：數據類型，行，列
     // 聲明一個2*3的float矩陣
