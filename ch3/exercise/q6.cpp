@@ -40,6 +40,7 @@ int main(int argc, char** argv)
     cout << "time of LU decomposition is " << 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SEC << "ms" << endl;
 
     // Method 6 : Jacobi Iteration
+    // TODO
 
     if(x1.isApprox(x2, .6f) && x1.isApprox(x3, .6f) && x1.isApprox(x4, .6f) && x1.isApprox(x5, .6f))
         cout << "Pass" << endl;
