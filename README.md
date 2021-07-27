@@ -35,7 +35,9 @@ cd build
 cmake ..
 sudo make install
 ```
-書中程式碼使用`SE3d`與`SO3d`，因為Sophus改成用模板類別，因此改成`SE3`與`SO3`
+書中程式碼使用`SE3d`與`SO3d`，因為Sophus改成用模板類別，因此改成`SE3`與`SO3`，
+若使用`SE3`需要`#include<sophus/se3.h>`
+若使用`SO3`需要`#include<sophus/so3.h>`
 
 ## IDE
 Visual studio code 
