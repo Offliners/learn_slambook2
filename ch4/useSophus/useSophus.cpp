@@ -2,8 +2,8 @@
 #include<cmath>
 #include<Eigen/Core>
 #include<Eigen/Geometry>
-#include"sophus/so3.h"
-#include"sophus/se3.h"
+#include<sophus/so3.h>
+#include<sophus/se3.h>
 
 using namespace std;
 using namespace Eigen;
