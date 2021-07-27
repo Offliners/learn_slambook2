@@ -14,7 +14,15 @@ apt-get install libeigen3-dev
 sudo apt-get install libglew-dev
 ```
 
-再照著這 [Link](https://github.com/stevenlovegrove/Pangolin/tree/1ec721d59ff6b799b9c24b8817f3b7ad2c929b83) 步驟安裝
+再照著以下步驟安裝
+```shell
+git clone https://github.com/stevenlovegrove/Pangolin.git
+cd Pangolin
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
 
 ### Sophus
 照以下步驟安裝
