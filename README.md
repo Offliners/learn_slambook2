@@ -16,6 +16,19 @@ sudo apt-get install libglew-dev
 
 再照著這 [Link](https://github.com/stevenlovegrove/Pangolin/tree/1ec721d59ff6b799b9c24b8817f3b7ad2c929b83) 步驟安裝
 
+### Sophus
+照以下步驟安裝
+```shell
+git clone http://github.com/strasdat/Sophus.git
+cd Sophus
+git checkout a621ff
+mkdir build
+cd build
+cmake ..
+sudo make install
+```
+書中程式碼使用`SE3d`與`SO3d`，因為Sophus改成用模板類別，因此改成`SE3`與`SO3`
+
 ## IDE
 Visual studio code 
 
