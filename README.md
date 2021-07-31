@@ -45,8 +45,8 @@ sudo make install
 安裝`3.4.3`，照以下步驟
 ```shell
 sudo apt-get install build-essential cmake
-wget https://github.com/opencv/opencv/archive/3.4.7.zip
-unzip 3.4.7.zip
+wget https://github.com/opencv/opencv/archive/3.4.3.zip
+unzip 3.4.3.zip
 cd opencv-3.4.3
 mkdir -p build && cd build
 cmake ..
