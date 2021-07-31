@@ -41,6 +41,12 @@ sudo make install
 
 若使用`SO3`需要`#include<sophus/so3.h>`
 
+### boost
+使用此指令安裝
+```shell
+sudo apt-get install libboost-all-dev
+```
+
 ## IDE
 Visual studio code 
 
