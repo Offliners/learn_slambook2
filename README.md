@@ -29,13 +29,12 @@ cmake --build .
 ```shell
 git clone http://github.com/strasdat/Sophus.git
 cd Sophus
-git checkout a621ff
 mkdir build
 cd build
 cmake ..
 sudo make install
 ```
-書中程式碼使用`SE3d`與`SO3d`，因為Sophus改成用模板類別，因此改成`SE3`與`SO3`
+如果用到模板類的Sophus需要把`SE3d`與`SO3d`改成用模板類別，因此改成`SE3`與`SO3`
 
 若使用`SE3`需要`#include<sophus/se3.h>`
 
