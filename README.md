@@ -13,6 +13,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
 * [DEMO](#demo)
   * [visualizeGeometry](#visualizegeometry) 
   * [trajectoryError](#trajectoryerror) 
+  * [stereoVision](#stereovision)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -131,6 +132,9 @@ sudo apt-get install libboost-all-dev
 
 ### trajectoryError
 ![trajectoryError](https://github.com/Offliners/Slambook2_note/blob/main/demo/trajectoryError.JPG)
+
+### stereoVision
+![stereoVision](https://github.com/Offliners/learn_slambook2/blob/main/demo/stereoVision.JPG)
 
 ## IDE
 Visual studio code 
