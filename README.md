@@ -121,7 +121,7 @@ sudo apt-get install libboost-all-dev
 
 ## DEMO
 ### trajectoryError
-![trajectoryError]()
+![trajectoryError](https://github.com/Offliners/Slambook2_note/blob/main/demo/trajectoryError.JPG)
 
 ## IDE
 Visual studio code 
