@@ -15,3 +15,4 @@ include_directories(${Pangolin_INCLUDE_DIRS})
 
 add_executable(joinMap joinMap.cpp)
 target_link_libraries(joinMap ${OpenCV_LIBS} ${Pangolin_LIBRARIES})
+target_link_libraries(joinMap Sophus::Sophus)
