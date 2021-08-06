@@ -14,6 +14,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [visualizeGeometry](#visualizegeometry) 
   * [trajectoryError](#trajectoryerror) 
   * [stereoVision](#stereovision)
+  * [joinMap](#joinmap)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -135,6 +136,9 @@ sudo apt-get install libboost-all-dev
 
 ### stereoVision
 ![stereoVision](https://github.com/Offliners/learn_slambook2/blob/main/demo/stereoVision.JPG)
+
+### joinMap
+![joinMap](https://github.com/Offliners/learn_slambook2/blob/main/demo/joinMap.JPG)
 
 ## IDE
 Visual studio code 
