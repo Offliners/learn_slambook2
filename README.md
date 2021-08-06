@@ -51,9 +51,16 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake).
 ```
 
 ### Eigen
-輸入此指令安裝，並加入到C/C++插件的includePath
+輸入此指令安裝
 ```shell
-apt-get install libeigen3-dev
+wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.zip
+unzip eigen-3.3.9.zip
+cd eigen3.3.9
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
 ```
 
 ### Pangolin
