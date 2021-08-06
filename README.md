@@ -5,6 +5,13 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
 * [Thirdparty](#thirdparty)
   * [CMake](#cmake)
   * [Eigen](#eigen)
+  * [Pangolin](#pangolin)
+  * [fmt](#fmt)
+  * [Sophus](#sophus)
+  * [OpenCV](#opencv)
+  * [Boost](#boost)
+* [IDE](#ide)
+* [References](#references) 
 
 ## Thirdparty
 ### CMake
@@ -63,6 +70,17 @@ cmake ..
 cmake --build .
 ```
 
+### fmt
+照以下步驟安裝
+```shell
+git clone  https://github.com/fmtlib/fmt.git
+cd fmt
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
 ### Sophus
 照以下步驟安裝
 ```shell
@@ -107,8 +125,8 @@ Visual studio code
 * C/C++ : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 * Remote - WSL : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 
-## Reference
+## References
 * github : https://github.com/gaoxiang12/slambook2
 * SLAM視覺十四講：雙倍內容強化版 (`ISBN：9789865501044`)
 
-![Reference](https://github.com/Offliners/SlambookWSL/blob/main/reference.png)
+![References](https://github.com/Offliners/SlambookWSL/blob/main/reference.png)
