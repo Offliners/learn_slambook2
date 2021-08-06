@@ -1,6 +1,11 @@
 # Slambook2 Note
 code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.04)
 
+## Table of Content
+* [Thirdparty](#thirdparty)
+  * [CMake](#cmake)
+  * [Eigen](#eigen)
+
 ## Thirdparty
 ### CMake
 Ubuntu 16.0 預設Cmake版本是3.5，但版本過舊，所以使用Cmake編譯一些第三方函式庫時會有問題，因此建議使用以下指令來更新到3.16以上
