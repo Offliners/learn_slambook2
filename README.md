@@ -10,6 +10,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [Sophus](#sophus)
   * [OpenCV](#opencv)
   * [Boost](#boost)
+* [DEMO](#demo)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -117,6 +118,10 @@ sudo make install
 ```shell
 sudo apt-get install libboost-all-dev
 ```
+
+## DEMO
+### trajectoryError
+![trajectoryError]()
 
 ## IDE
 Visual studio code 
