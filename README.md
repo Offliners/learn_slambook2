@@ -128,6 +128,9 @@ sudo apt-get install libboost-all-dev
 ### trajectoryError
 ![trajectoryError](https://github.com/Offliners/Slambook2_note/blob/main/demo/trajectoryError.JPG)
 
+### visualizeGeometry
+![visualizeGeometry](https://github.com/Offliners/learn_slambook2/blob/main/demo/visualizeGeometry.JPG)
+
 ## IDE
 Visual studio code 
 
