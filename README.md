@@ -34,11 +34,13 @@ cd build
 cmake ..
 sudo make install
 ```
-如果用到模板類的Sophus需要把`SE3d`與`SO3d`改成用模板類別，因此改成`SE3`與`SO3`
+如果用到模板類的Sophus需要進行以下更改
 
-若使用`SE3`需要`#include<sophus/se3.h>`
+`SE3`需要`#include<sophus/se3.h>`
 
-若使用`SO3`需要`#include<sophus/so3.h>`
+`SO3`需要`#include<sophus/so3.h>`
+
+`SE3d`與`SO3d`改成用模板類別，因此改成`SE3`與`SO3`
 
 ### OpenCV
 安裝`3.4.3`，照以下步驟
