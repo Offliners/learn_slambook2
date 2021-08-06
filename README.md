@@ -121,9 +121,9 @@ sudo apt-get install libboost-all-dev
 ## IDE
 Visual studio code 
 
-## Visual Studio Code Extensions  
-* C/C++ : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-* Remote - WSL : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+* Visual Studio Code Extensions  
+  * C/C++ : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+  * Remote - WSL : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 
 ## References
 * github : https://github.com/gaoxiang12/slambook2
