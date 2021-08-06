@@ -44,10 +44,7 @@ source ~/.bashrc
 
 最後使用以下指令即可看到新版的Cmake
 ```shell
-$ cmake --version
-cmake version 3.16.0
-
-CMake suite maintained and supported by Kitware (kitware.com/cmake).
+cmake --version
 ```
 
 ### Eigen
