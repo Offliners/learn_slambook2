@@ -43,9 +43,11 @@ for name in result:
         plt.plot(x_est, y_est, 'r', label='Estimate curve')
         plt.scatter(x_noise, y_noise, s=5, c='g', label='Noise')
         plt.xlabel('x')
-        plt.xlabel('y')
+        plt.ylabel('y')
         plt.title(name + ' method (used time : ' + useTime + ')')
         plt.legend()
         plt.grid()
         plt.savefig(output_path + name + '_plot.png')
         plt.clf()
+
+print('Done')

@@ -18,7 +18,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [trajectoryError](#trajectoryerror) 
   * [stereoVision](#stereovision)
   * [joinMap](#joinmap)
-  * [curveFitting](#curveFitting)
+  * [curveFitting](#curvefitting)
 * [IDE](#ide)
 * [References](#references) 
 
