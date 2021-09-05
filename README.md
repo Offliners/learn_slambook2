@@ -10,6 +10,9 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [Sophus](#sophus)
   * [OpenCV](#opencv)
   * [Boost](#boost)
+  * [g2o](#g2o)
+  * [gflags](#gflags)
+  * [ceres-solver](#ceres-solver)
 * [DEMO](#demo)
   * [visualizeGeometry](#visualizegeometry) 
   * [trajectoryError](#trajectoryerror) 
@@ -19,6 +22,11 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
 * [References](#references) 
 
 ## Thirdparty
+若想安裝`CMake`以外的第三方函示庫可執行
+```shell
+sh build.sh
+```
+來安裝
 ### CMake
 Ubuntu 16.0 預設Cmake版本是3.5，但版本過舊，所以使用Cmake編譯一些第三方函式庫時會有問題，因此建議使用以下指令來更新到3.16以上
 ```shell
@@ -56,8 +64,7 @@ cmake --version
 wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.zip
 unzip eigen-3.3.9.zip
 cd eigen3.3.9
-mkdir build
-cd build
+mkdir build && cd build
 cmake ..
 make
 sudo make install
@@ -73,8 +80,7 @@ sudo apt-get install libglew-dev
 ```shell
 git clone https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
-mkdir build
-cd build
+mkdir build && cd build
 cmake ..
 cmake --build .
 ```
@@ -95,8 +101,7 @@ sudo make install
 ```shell
 git clone http://github.com/strasdat/Sophus.git
 cd Sophus
-mkdir build
-cd build
+mkdir build && cd build
 cmake ..
 sudo make install
 ```
@@ -127,18 +132,51 @@ sudo make install
 sudo apt-get install libboost-all-dev
 ```
 
+### g2o
+照以下步驟安裝
+```shell
+git clone https://github.com/RainerKuemmerle/g2o.git
+cd g2o
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### gflags
+照以下步驟安裝
+```shell
+git clone https://github.com/gflags/gflags
+cd gflags
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### ceres-solver
+照以下步驟安裝
+```shell
+git clone https://github.com/ceres-solver/ceres-solver.git
+cd ceres-solver
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
 ## DEMO
 ### visualizeGeometry
-![visualizeGeometry](https://github.com/Offliners/learn_slambook2/blob/main/demo/visualizeGeometry.JPG)
+![visualizeGeometry](demo/visualizeGeometry.JPG)
 
 ### trajectoryError
-![trajectoryError](https://github.com/Offliners/Slambook2_note/blob/main/demo/trajectoryError.JPG)
+![trajectoryError](demo/trajectoryError.JPG)
 
 ### stereoVision
-![stereoVision](https://github.com/Offliners/learn_slambook2/blob/main/demo/stereoVision.JPG)
+![stereoVision](demo/stereoVision.JPG)
 
 ### joinMap
-![joinMap](https://github.com/Offliners/learn_slambook2/blob/main/demo/joinMap.JPG)
+![joinMap](demo/joinMap.JPG)
 
 ## IDE
 Visual studio code 
@@ -151,4 +189,4 @@ Visual studio code
 * github : https://github.com/gaoxiang12/slambook2
 * SLAM視覺十四講：雙倍內容強化版 (`ISBN：9789865501044`)
 
-![References](https://github.com/Offliners/SlambookWSL/blob/main/reference.png)
+![References](reference.png)
