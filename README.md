@@ -22,11 +22,11 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
 * [References](#references) 
 
 ## Thirdparty
-若想安裝`CMake`以外的第三方函示庫可執行
+若想安裝`CMake`以外的第三方函示庫可執行`build.sh`來安裝
 ```shell
 sh build.sh
 ```
-來安裝
+
 ### CMake
 Ubuntu 16.0 預設Cmake版本是3.5，但版本過舊，所以使用Cmake編譯一些第三方函式庫時會有問題，因此建議使用以下指令來更新到3.16以上
 ```shell
