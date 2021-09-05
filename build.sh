@@ -13,6 +13,7 @@ cd ./3rdparty
 # Dependency
 sudo apt-get install build-essential cmake
 sudo apt-get install libboost-all-dev
+sudo apt-get install libglew-dev
 sudo apt-get install python3-tk
 
 # Eigen 3.3.9
@@ -29,6 +30,21 @@ else
     make
     sudo make install
     echo "Successfully installed Eigen 3.3.9"
+    cd ../..
+fi
+
+# Pangolin
+if [ -d "/usr/local/include/pangolin" ]
+then
+    echo "pangolin has installed"
+else
+    git clone https://github.com/stevenlovegrove/Pangolin.git
+    cd Pangolin
+    mkdir build && cd build
+    cmake ..
+    make
+    sudo make install
+    echo "Successfully installed pangolin"
     cd ../..
 fi
 
