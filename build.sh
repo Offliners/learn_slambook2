@@ -2,8 +2,18 @@
 # Program : Program helps to build thirdparty of the slambook2 to user's environment
 # History : 2021/07/16 First release
 
-mkdir 3rdparty
+if [ -d "./3rdparty" ]
+then
+    echo "3rdparty exists!"
+else
+    mkdir 3rdparty
+fi
 cd ./3rdparty
+
+# Dependency
+sudo apt-get install build-essential cmake
+sudo apt-get install libboost-all-dev
+sudo apt-get install python3-tk
 
 # Eigen 3.3.9
 if [ -d "/usr/local/include/eigen3" ]
@@ -57,7 +67,6 @@ if [ -d "/usr/local/include/opencv" ]
 then
     echo "OpenCV has installed"
 else
-    sudo apt-get install build-essential cmake
     wget https://github.com/opencv/opencv/archive/3.4.3.zip
     unzip 3.4.3.zip
     rm 3.4.3.zip
@@ -69,9 +78,6 @@ else
     echo "Successfully installed OpenCV 3.4.3"
     cd ../..
 fi
-
-# Boost
-sudo apt-get install libboost-all-dev
 
 # g2o
 if [ -d "/usr/local/include/g2o" ]
@@ -106,7 +112,7 @@ fi
 # ceres-solver
 if [ -d "/usr/local/include/ceres" ]
 then
-    echo "g2o has installed"
+    echo "ceres-solver has installed"
 else
     git clone https://github.com/ceres-solver/ceres-solver.git
     cd ceres-solver

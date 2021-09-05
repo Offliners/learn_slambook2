@@ -2,6 +2,7 @@
 #include<opencv2/core/core.hpp>
 #include<ceres/ceres.h>
 #include<chrono>
+#include<fstream>
 
 using namespace std;
 
@@ -30,6 +31,8 @@ int main(int argc, char **argv)
     double w_sigma = 1.0;                        // 噪聲Sigma值
     double inv_sigma = 1.0 / w_sigma;
     cv::RNG rng;                                 // OpenCV隨機數產生器
+    ofstream output;
+    output.open("output/ceresCurveFitting_result.txt");
 
     vector<double> x_data, y_data;      // 數據
     for (int i = 0; i < N; ++i)
@@ -37,6 +40,7 @@ int main(int argc, char **argv)
         double x = i / 100.0;
         x_data.push_back(x);
         y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
+        output << x_data[i] << " " << y_data[i] << endl;
     }
 
     double abc[3] = {ae, be, ce};
@@ -70,8 +74,15 @@ int main(int argc, char **argv)
     // 輸出結果
     cout << summary.BriefReport() << endl;
     cout << "estimated a,b,c = ";
-    for (auto a:abc) cout << a << " ";
+    for (auto a:abc) 
+        cout << a << " ";
+    
     cout << endl;
+
+    output << ar << " " << br << " " << cr << endl;
+    output << abc[0] << " " << abc[1] << " " << abc[2] << endl;
+    output << time_used.count() << endl;
+    output.close();
 
     return 0;
 }

@@ -3,6 +3,7 @@
 #include<opencv2/opencv.hpp>
 #include<Eigen/Core>
 #include<Eigen/Dense>
+#include<fstream>
 
 using namespace std;
 using namespace Eigen;
@@ -15,6 +16,8 @@ int main(int argc, char **argv)
     double w_sigma = 1.0;                        // 噪聲Sigma值
     double inv_sigma = 1.0 / w_sigma;
     cv::RNG rng;                                 // OpenCV隨機樹產生器
+    ofstream output;
+    output.open("output/gaussNewton_result.txt");
 
     vector<double> x_data, y_data;      // 數據
     for (int i = 0; i < N; ++i)
@@ -22,6 +25,7 @@ int main(int argc, char **argv)
         double x = i / 100.0;
         x_data.push_back(x);
         y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
+        output << x_data[i] << " " << y_data[i] << endl;
     }
 
     // 開始Gauss-Newton迭代
@@ -80,5 +84,11 @@ int main(int argc, char **argv)
     cout << "solve time cost = " << time_used.count() << " seconds. " << endl;
 
     cout << "estimated abc = " << ae << ", " << be << ", " << ce << endl;
+
+    output << ar << " " << br << " " << cr << endl;
+    output << ae << " " << be << " " << ce << endl;
+    output << time_used.count() << endl;
+    output.close();
+
     return 0;
 }

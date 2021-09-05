@@ -11,6 +11,7 @@
 #include<opencv2/core/core.hpp>
 #include<cmath>
 #include<chrono>
+#include<fstream>
 
 using namespace std;
 
@@ -77,6 +78,8 @@ int main(int argc, char **argv)
     double w_sigma = 1.0;                        // 噪聲Sigma值
     double inv_sigma = 1.0 / w_sigma;
     cv::RNG rng;                                 // OpenCV隨機數產生器
+    ofstream output;
+    output.open("output/g2oCurveFitting_result.txt");
 
     vector<double> x_data, y_data;      // 數據
     for (int i = 0; i < N; i++)
@@ -84,6 +87,7 @@ int main(int argc, char **argv)
         double x = i / 100.0;
         x_data.push_back(x);
         y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
+        output << x_data[i] << " " << y_data[i] << endl;
     }
 
     // 構建圖優化，先設定g2o
@@ -125,6 +129,11 @@ int main(int argc, char **argv)
     // 输出優化值
     Eigen::Vector3d abc_estimate = v->estimate();
     cout << "estimated model: " << abc_estimate.transpose() << endl;
+
+    output << ar << " " << br << " " << cr << endl;
+    output << abc_estimate.transpose() << endl;
+    output << time_used.count() << endl;
+    output.close();
 
     return 0;
 }

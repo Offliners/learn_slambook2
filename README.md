@@ -18,6 +18,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [trajectoryError](#trajectoryerror) 
   * [stereoVision](#stereovision)
   * [joinMap](#joinmap)
+  * [curveFitting](#curveFitting)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -25,6 +26,11 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
 若想安裝`CMake`以外的第三方函示庫可執行`build.sh`來安裝
 ```shell
 sh build.sh
+```
+
+由於需要繪製圖，因此需要安裝Python函式庫
+```shell
+pip install -r requirements.txt
 ```
 
 ### CMake
@@ -177,6 +183,11 @@ sudo make install
 
 ### joinMap
 ![joinMap](demo/joinMap.JPG)
+
+### curveFitting
+|Gauss Newton|ceres-solver|g2o|
+|-|-|-|
+|![Gauss Newton](ch6/output/gaussNewton_plot.png)|![Gauss Newton](ch6/output/ceresCurveFitting_plot.png)|![g2o](ch6/output/g2oCurveFitting_plot.png)|
 
 ## IDE
 Visual studio code 
