@@ -9,8 +9,8 @@ using namespace std;
 using namespace Eigen;
 
 // 文件路徑
-string left_file = "./left.png";
-string right_file = "./right.png";
+string left_file = "./stereo/left.png";
+string right_file = "./stereo/right.png";
 
 // 在pangolin中畫圖，已寫好，無須調整
 void showPointCloud(const vector<Vector4d, Eigen::aligned_allocator<Vector4d>> &pointcloud);

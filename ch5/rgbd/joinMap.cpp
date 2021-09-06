@@ -2,11 +2,11 @@
 #include<fstream>
 #include<opencv2/opencv.hpp>
 #include<boost/format.hpp>  // for formating strings
-#include<sophus/se3.h>
+#include<sophus/se3.hpp>
 #include<pangolin/pangolin.h>
 
 using namespace std;
-typedef vector<Sophus::SE3, Eigen::aligned_allocator<Sophus::SE3>> TrajectoryType;
+typedef vector<Sophus::SE3d, Eigen::aligned_allocator<Sophus::SE3d>> TrajectoryType;
 typedef Eigen::Matrix<double, 6, 1> Vector6d;
 
 // 在pangolin中畫圖，已寫好，無須調整
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     vector<cv::Mat> colorImgs, depthImgs;    // 彩色圖和深度圖
     TrajectoryType poses;         // 相機位姿
 
-    ifstream fin("./pose.txt");
+    ifstream fin("./rgbd/pose.txt");
     if (!fin) 
     {
         cerr << "請在有pose.txt的目錄下運行此程序" << endl;
@@ -26,14 +26,14 @@ int main(int argc, char **argv)
 
     for (int i = 0; i < 5; ++i)
     {
-        boost::format fmt("./%s/%d.%s"); //圖像文件格式
+        boost::format fmt("./rgbd/%s/%d.%s"); //圖像文件格式
         colorImgs.push_back(cv::imread((fmt % "color" % (i + 1) % "png").str()));
         depthImgs.push_back(cv::imread((fmt % "depth" % (i + 1) % "pgm").str(), -1)); // 使用-1讀取原始圖像
 
         double data[7] = {0};
         for (auto &d:data)
             fin >> d;
-        Sophus::SE3 pose(Eigen::Quaterniond(data[6], data[3], data[4], data[5]), Eigen::Vector3d(data[0], data[1], data[2]));
+        Sophus::SE3d pose(Eigen::Quaterniond(data[6], data[3], data[4], data[5]), Eigen::Vector3d(data[0], data[1], data[2]));
         poses.push_back(pose);
     }
 
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
         cout << "轉換圖像中: " << i + 1 << endl;
         cv::Mat color = colorImgs[i];
         cv::Mat depth = depthImgs[i];
-        Sophus::SE3 T = poses[i];
+        Sophus::SE3d T = poses[i];
         for (int v = 0; v < color.rows; ++v)
         {
             for (int u = 0; u < color.cols; ++u)
