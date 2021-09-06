@@ -2,6 +2,8 @@
 # Program : Program helps to build thirdparty of the slambook2 to user's environment
 # History : 2021/07/16 First release
 
+pip install -r requirements.txt
+
 if [ -d "./3rdparty" ]
 then
     echo "3rdparty exists!"
