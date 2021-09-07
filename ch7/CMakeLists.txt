@@ -3,6 +3,7 @@ project(ch7)
 
 set(CMAKE_BUILD_TYPE "Release")
 add_definitions("-DENABLE_SSE")
+set(CMAKE_CXX_STANDARD 14) 
 set(CMAKE_CXX_FLAGS "-std=c++14 -O2 ${SSE_FLAGS} -msse4")
 list(APPEND CMAKE_MODULE_PATH ~/learn_slambook2/3rdparty/g2o/cmake_modules)
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
@@ -31,7 +32,7 @@ add_executable(triangulation triangulation.cpp)
 target_link_libraries(triangulation ${OpenCV_LIBS})
 
 add_executable(pose_estimation_3d2d pose_estimation_3d2d.cpp)
-target_link_libraries(pose_estimation_3d2d g2o_core g2o_stuff ${OpenCV_LIBS})
+target_link_libraries(pose_estimation_3d2d Sophus::Sophus g2o_core g2o_stuff ${OpenCV_LIBS})
 
-# add_executable(pose_estimation_3d3d pose_estimation_3d3d.cpp)
-# target_link_libraries(pose_estimation_3d3d g2o_core g2o_stuff ${OpenCV_LIBS})
+add_executable(pose_estimation_3d3d pose_estimation_3d3d.cpp)
+target_link_libraries(pose_estimation_3d3d Sophus::Sophus g2o_core g2o_stuff ${OpenCV_LIBS})
