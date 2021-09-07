@@ -21,6 +21,8 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [curveFitting](#curvefitting)
   * [orb_cv](#orb_cv)
   * [orb_self](#orb_self)
+  * [optical_flow](#optical_flow)
+  * [direct_method](#direct_method)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -191,6 +193,12 @@ sudo make install
 
 ### orb_self
 ![orb_self](demo/orb_self.JPG)
+
+### optical_flow
+![optical_flow](demo/optical_flow.JPG)
+
+### direct_method
+![direct_method](demo/direct_method.JPG)
 
 ## IDE
 Visual studio code 
