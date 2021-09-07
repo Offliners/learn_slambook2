@@ -19,6 +19,8 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [stereoVision](#stereovision)
   * [joinMap](#joinmap)
   * [curveFitting](#curvefitting)
+  * [orb_cv](#orb_cv)
+  * [orb_self](#orb_self)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -183,6 +185,12 @@ sudo make install
 |Gauss Newton|ceres-solver|g2o|
 |-|-|-|
 |![Gauss Newton](ch6/output/gaussNewton_plot.png)|![Gauss Newton](ch6/output/ceresCurveFitting_plot.png)|![g2o](ch6/output/g2oCurveFitting_plot.png)|
+
+### orb_cv
+![orb_cv](demo/orb_cv.JPG)
+
+### orb_self
+![orb_self](demo/orb_self.JPG)
 
 ## IDE
 Visual studio code 
