@@ -144,6 +144,12 @@ sudo apt-get install libboost-all-dev
 sudo apt-get install libsuitesparse-dev
 ```
 
+使用
+```shell
+qmake -v
+```
+確認QT版本是否為5，這樣使用`g2o_viewer`才不會有問題
+
 再照以下步驟安裝
 ```shell
 git clone https://github.com/RainerKuemmerle/g2o.git
