@@ -17,6 +17,8 @@ sudo apt-get install build-essential cmake
 sudo apt-get install libboost-all-dev
 sudo apt-get install libglew-dev
 sudo apt-get install libsuitesparse-dev
+sudo apt-get install libqglviewer-dev
+sudo apt-get install python-argparse
 sudo apt-get install python3-tk
 
 # Eigen 3.3.9
@@ -140,5 +142,20 @@ else
     make
     sudo make install
     echo "Successfully installed ceres-solver"
+    cd ../..
+fi
+
+# DBoW3
+if [ -d "/usr/local/include/DBoW3" ]
+then
+    echo "DBoW3 has installed"
+else
+    git clone https://github.com/rmsalinas/DBow3.git
+    cd DBoW3
+    mkdir build && cd build
+    cmake ..
+    make
+    sudo make install
+    echo "Successfully installed DBoW3"
     cd ../..
 fi
