@@ -41,6 +41,7 @@ wget http://www.cmake.org/files/v3.16/cmake-3.16.0.tar.gz
 tar xf cmake-3.16.0.tar.gz
 cd cmake-3.16.0
 ./configure
+cmake .
 make
 sudo make install
 ```
