@@ -16,6 +16,7 @@ cd ./3rdparty
 sudo apt-get install build-essential cmake
 sudo apt-get install libboost-all-dev
 sudo apt-get install libglew-dev
+sudo apt-get install libsuitesparse-dev
 sudo apt-get install python3-tk
 
 # Eigen 3.3.9

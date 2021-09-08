@@ -23,6 +23,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [orb_self](#orb_self)
   * [optical_flow](#optical_flow)
   * [direct_method](#direct_method)
+  * [bundle_adjustment](#bundle_adjustment)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -138,7 +139,12 @@ sudo apt-get install libboost-all-dev
 ```
 
 ### g2o
-照以下步驟安裝
+先安裝依賴庫
+```shell
+sudo apt-get install libsuitesparse-dev
+```
+
+再照以下步驟安裝
 ```shell
 git clone https://github.com/RainerKuemmerle/g2o.git
 cd g2o
@@ -200,12 +206,19 @@ sudo make install
 ### direct_method
 ![direct_method](demo/direct_method.JPG)
 
+### bundle_adjustment
+![bundle_adjustment](demo/bundle_adjustment.gif)
+
 ## IDE
 Visual studio code 
 
 * Visual Studio Code Extensions  
   * C/C++ : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
   * Remote - WSL : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+  * Python : [Link](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  * CMake : [Link](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
+  * CMake Tools : [Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+  * vscode-3d-preview : [Link](https://marketplace.visualstudio.com/items?itemName=tatsy.vscode-3d-preview)
 
 ## References
 * github : https://github.com/gaoxiang12/slambook2
