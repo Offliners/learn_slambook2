@@ -13,11 +13,14 @@ fi
 cd ./3rdparty
 
 # Dependency
+sudo apt install unzip
 sudo apt-get install build-essential cmake
 sudo apt-get install libboost-all-dev
 sudo apt-get install libglew-dev
 sudo apt-get install libsuitesparse-dev
 sudo apt-get install libqglviewer-dev
+sudo apt-get install libgoogle-glog-dev libgflags-dev
+sudo apt-get install libatlas-base-dev
 sudo apt-get install python-argparse
 sudo apt-get install python3-tk
 
@@ -75,8 +78,7 @@ then
 else
     git clone http://github.com/strasdat/Sophus.git
     cd Sophus
-    mkdir build
-    cd build
+    mkdir build && cd build
     cmake ..
     sudo make install
     echo "Successfully installed sophus"

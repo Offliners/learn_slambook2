@@ -4,7 +4,7 @@ project( visualizeGeometry )
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
 # 添加Eigen頭文件
-include_directories( "/usr/include/eigen3" )
+include_directories( "/usr/local/include/eigen3" )
 
 # 添加Pangolin依賴
 find_package( Pangolin )
