@@ -41,6 +41,8 @@ wget http://www.cmake.org/files/v3.16/cmake-3.16.0.tar.gz
 tar xf cmake-3.16.0.tar.gz
 cd cmake-3.16.0
 ./configure
+make
+sudo make install
 ```
 
 接著，為了解決路徑問題，所以要加到環境變數
