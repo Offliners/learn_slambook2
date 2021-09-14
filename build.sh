@@ -2,6 +2,8 @@
 # Program : Program helps to build thirdparty of the slambook2 to user's environment
 # History : 2021/07/16 First release
 
+sudo apt-get update
+
 pip install -r requirements.txt
 
 if [ -d "./3rdparty" ]
@@ -21,6 +23,15 @@ sudo apt-get install libsuitesparse-dev
 sudo apt-get install libqglviewer-dev
 sudo apt-get install libgoogle-glog-dev libgflags-dev
 sudo apt-get install libatlas-base-dev
+sudo apt-get install libpcl-dev pcl-tools
+sudo apt-get install doxygen
+sudo apt-get install mpi-default-dev openmpi-bin openmpi-common    
+sudo apt-get install libflann1.8 libflann-dev
+sudo apt-get install libqhull* libgtest-dev  
+sudo apt-get install freeglut3-dev pkg-config  
+sudo apt-get install libxmu-dev libxi-dev   
+sudo apt-get install mono-complete  
+sudo apt-get install qt-sdk openjdk-8-jdk openjdk-8-jre
 sudo apt-get install python-argparse
 sudo apt-get install python3-tk
 
@@ -38,7 +49,7 @@ else
     make
     sudo make install
     echo "Successfully installed Eigen 3.3.9"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # Pangolin
@@ -53,7 +64,7 @@ else
     make
     sudo make install
     echo "Successfully installed pangolin"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # fmt
@@ -68,7 +79,7 @@ else
     make
     sudo make install
     echo "Successfully installed fmt"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # Sophus
@@ -82,7 +93,7 @@ else
     cmake ..
     sudo make install
     echo "Successfully installed sophus"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # OpenCV 3.4.3
@@ -99,7 +110,7 @@ else
     make
     sudo make install
     echo "Successfully installed OpenCV 3.4.3"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # g2o
@@ -114,7 +125,7 @@ else
     make
     sudo make install
     echo "Successfully installed g2o"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # gflags
@@ -129,7 +140,7 @@ else
     make
     sudo make install
     echo "Successfully installed glags"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # ceres-solver
@@ -144,7 +155,7 @@ else
     make
     sudo make install
     echo "Successfully installed ceres-solver"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
 fi
 
 # DBoW3
@@ -159,5 +170,54 @@ else
     make
     sudo make install
     echo "Successfully installed DBoW3"
-    cd ../..
+    cd ~/learn_slambook2/3rdparty
+fi
+
+# vtk 8.2.0
+if [ -d "/usr/local/include/vtk" ]
+then
+    echo "vtk has installed"
+else
+    wget https://www.vtk.org/files/release/8.2/VTK-8.2.0.zip
+    unzip VTK-8.2.0.zip
+    rm VTK-8.2.0.zip
+    cd VTK-8.2.0
+    mkdir -p build && cd build
+    cmake ..
+    make
+    sudo make install
+    echo "Successfully installed vtk 8.2.0"
+    cd ~/learn_slambook2/3rdparty
+fi
+
+# pcl 1.9.1
+if [ -d "/usr/local/include/pcl" ]
+then
+    echo "pcl has installed"
+else
+    wget https://github.com/PointCloudLibrary/pcl/archive/refs/tags/pcl-1.9.1.zip
+    unzip pcl-1.9.1.zip
+    rm pcl-1.9.1.zip
+    cd pcl-pcl-1.9.1
+    mkdir -p build && cd build
+    cmake ..
+    make
+    sudo make install
+    echo "Successfully installed pcl 1.9.1"
+    cd ~/learn_slambook2/3rdparty
+fi
+
+# octomap
+if [ -d "/usr/local/include/octomap" ]
+then
+    echo "octomap has installed"
+else
+    git clone https://github.com/OctoMap/octomap.git
+    cd octomap
+    mkdir build && cd build
+    cmake ..
+    make
+    sudo make install
+    echo "Successfully installed octomap"
+    cd ~/learn_slambook2/3rdparty
 fi

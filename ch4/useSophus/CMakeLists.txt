@@ -3,7 +3,9 @@ cmake_minimum_required(VERSION 3.0)
 project(useSophus)
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
-include_directories( "/usr/local/include/eigen3" )
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 find_package(Sophus REQUIRED)
 include_directories( ${Sophus_INCLUDE_DIRS} )
 

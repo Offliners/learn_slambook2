@@ -11,12 +11,13 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 find_package(OpenCV 3 REQUIRED)
 find_package(G2O REQUIRED)
 find_package(Sophus REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 include_directories(
         ${OpenCV_INCLUDE_DIRS}
         ${G2O_INCLUDE_DIRS}
         ${Sophus_INCLUDE_DIRS}
-        "/usr/include/eigen3/"
+        ${EIGEN3_INCLUDE_DIR}
 )
 
 add_executable(orb_cv orb_cv.cpp)

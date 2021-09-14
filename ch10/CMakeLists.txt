@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "-std=c++14 -O2")
 list(APPEND CMAKE_MODULE_PATH ~/learn_slambook2/3rdparty/g2o/cmake_modules)
 
 # Eigen
-include_directories("/usr/include/eigen3")
+find_package(Eigen3 REQUIRED)
 
 # sophus 
 find_package(Sophus REQUIRED)

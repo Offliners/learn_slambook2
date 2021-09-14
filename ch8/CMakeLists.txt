@@ -8,11 +8,12 @@ set(CMAKE_CXX_FLAGS "-std=c++11 ${SSE_FLAGS} -g -O3 -march=native")
 find_package(OpenCV 3 REQUIRED)
 find_package(Sophus REQUIRED)
 find_package(Pangolin REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 include_directories(
         ${OpenCV_INCLUDE_DIRS}
         ${Sophus_INCLUDE_DIRS}
-        "/usr/include/eigen3/"
+        ${EIGEN3_INCLUDE_DIR}
         ${Pangolin_INCLUDE_DIRS}
 )
 
