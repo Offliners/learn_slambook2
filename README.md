@@ -13,6 +13,10 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [g2o](#g2o)
   * [gflags](#gflags)
   * [ceres-solver](#ceres-solver)
+  * [DBoW3](#dbow3)
+  * [vtk](#vtk)
+  * [pcl](#pcl)
+  * [octomap](#octomap)
 * [DEMO](#demo)
   * [visualizeGeometry](#visualizegeometry) 
   * [trajectoryError](#trajectoryerror) 
@@ -179,6 +183,52 @@ sudo make install
 ```shell
 git clone https://github.com/ceres-solver/ceres-solver.git
 cd ceres-solver
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### DBoW3
+照以下步驟安裝
+```shell
+git clone https://github.com/rmsalinas/DBow3.git
+cd DBoW3
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### vtk
+照以下步驟安裝
+```shell
+wget https://www.vtk.org/files/release/8.2/VTK-8.2.0.zip
+unzip VTK-8.2.0.zip
+cd VTK-8.2.0
+mkdir -p build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### pcl
+照以下步驟安裝
+```shell
+wget https://github.com/PointCloudLibrary/pcl/archive/refs/tags/pcl-1.9.1.zip
+unzip pcl-1.9.1.zip
+cd pcl-pcl-1.9.1
+mkdir -p build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### octomap
+照以下步驟安裝
+```shell
+git clone https://github.com/OctoMap/octomap.git
+cd octomap
 mkdir build && cd build
 cmake ..
 make
