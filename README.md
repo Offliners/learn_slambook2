@@ -12,6 +12,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [Boost](#boost)
   * [g2o](#g2o)
   * [gflags](#gflags)
+  * [glog](#glog)
   * [ceres-solver](#ceres-solver)
   * [DBoW3](#dbow3)
   * [vtk](#vtk)
@@ -172,6 +173,17 @@ sudo make install
 ```shell
 git clone https://github.com/gflags/gflags
 cd gflags
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+
+### glog
+照以下步驟安裝
+```shell
+git clone https://github.com/google/glog
+cd glog
 mkdir build && cd build
 cmake ..
 make

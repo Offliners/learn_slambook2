@@ -139,7 +139,22 @@ else
     cmake ..
     make
     sudo make install
-    echo "Successfully installed glags"
+    echo "Successfully installed gflags"
+    cd ~/learn_slambook2/3rdparty
+fi
+
+# glog
+if [ -d "/usr/local/include/glog" ]
+then
+    echo "glog has installed"
+else
+    git clone https://github.com/google/glog
+    cd glog
+    mkdir build && cd build
+    cmake ..
+    make
+    sudo make install
+    echo "Successfully installed glog"
     cd ~/learn_slambook2/3rdparty
 fi
 
