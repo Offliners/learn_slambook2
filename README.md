@@ -29,6 +29,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [optical_flow](#optical_flow)
   * [direct_method](#direct_method)
   * [bundle_adjustment](#bundle_adjustment)
+  * [myslam](#myslam)
 * [IDE](#ide)
 * [References](#references) 
 
@@ -279,6 +280,9 @@ sudo make install
 
 ### bundle_adjustment
 ![bundle_adjustment](demo/bundle_adjustment.gif)
+
+### myslam
+![myslam](demo/myslam.gif)
 
 ## IDE
 Visual studio code 
