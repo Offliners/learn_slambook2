@@ -15,7 +15,8 @@ fi
 cd ./3rdparty
 
 # Dependency
-sudo apt install unzip
+sudo apt-get install libssl-dev
+sudo apt- install unzip
 sudo apt-get install build-essential cmake
 sudo apt-get install libboost-all-dev
 sudo apt-get install libglew-dev
