@@ -14,7 +14,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [gflags](#gflags)
   * [glog](#glog)
   * [ceres-solver](#ceres-solver)
-  * [DBoW3](#dbow3)
+  * [DBo3](#dbow3)
   * [vtk](#vtk)
   * [pcl](#pcl)
   * [octomap](#octomap)
@@ -202,11 +202,11 @@ make
 sudo make install
 ```
 
-### DBoW3
+### DBow3
 照以下步驟安裝
 ```shell
 git clone https://github.com/rmsalinas/DBow3.git
-cd DBoW3
+cd DBow3
 mkdir build && cd build
 cmake ..
 make
