@@ -14,7 +14,7 @@ code of 14 lectures on visual SLAM 2nd built on Windows 10 using WSL(Ubuntu 16.0
   * [gflags](#gflags)
   * [glog](#glog)
   * [ceres-solver](#ceres-solver)
-  * [DBo3](#dbow3)
+  * [DBow3](#dbow3)
   * [vtk](#vtk)
   * [pcl](#pcl)
   * [octomap](#octomap)
