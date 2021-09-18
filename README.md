@@ -78,7 +78,7 @@ cmake --version
 ```shell
 wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.zip
 unzip eigen-3.3.9.zip
-cd eigen3.3.9
+cd eigen-3.3.9
 mkdir build && cd build
 cmake ..
 make
