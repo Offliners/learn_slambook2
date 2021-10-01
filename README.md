@@ -93,12 +93,13 @@ sudo apt-get install libglew-dev
 
 再照著以下步驟安裝
 ```shell
-git clone https://github.com/stevenlovegrove/Pangolin.git
+git clone https://github.com/zzx2GH/Pangolin.git
 cd Pangolin
 mkdir build && cd build
 cmake ..
 cmake --build .
 ```
+由於新版的Pangolin有些問題，所以這裡安裝舊版
 
 ### fmt
 照以下步驟安裝
