@@ -58,7 +58,7 @@ if [ -d "/usr/local/include/pangolin" ]
 then
     echo "pangolin has installed"
 else
-    git clone https://github.com/stevenlovegrove/Pangolin.git
+    https://github.com/zzx2GH/Pangolin.git
     cd Pangolin
     mkdir build && cd build
     cmake ..
